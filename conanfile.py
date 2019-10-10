@@ -3,8 +3,8 @@ from conans import ConanFile
 from conans.client import tools
 
 
-class NinjaConan(ConanFile):
-    name = "ninja"
+class NinjaInstallerConan(ConanFile):
+    name = "ninja_installer"
     version = "1.8.2"
     license = "TDB"
     url = "TBD"
@@ -35,3 +35,4 @@ class NinjaConan(ConanFile):
 
     def package_info(self):
         self.env_info.path.append(os.path.join(self.package_folder, "bin"))
+        self.env_info.CONAN_CMAKE_GENERATOR = "Ninja"
