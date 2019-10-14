@@ -28,3 +28,12 @@ class MyCppConan(ConanFile):
         cmake.configure()
         cmake.build()
 ```
+
+Alternatively, you can specify the build requirements in a profile:
+
+```ini
+[build_requires]
+cmake_installer/a.b.c@conan/stable
+ninja_installer/x.y.y@<user>/<channel>
+```
+
