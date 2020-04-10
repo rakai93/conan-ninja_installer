@@ -20,11 +20,11 @@ class MyCppConan(ConanFile):
 
     build_requires = (
         "cmake_installer/a.b.c@conan/stable",
-        "ninja_installer/x.y.y@<user>/<channel>"
+        "ninja_installer/x.y.z@<user>/<channel>"
     )
 
     def build(self):
-        cmake = CMake(self)
+        cmake = CMake(self, generator="Ninja")
         cmake.configure()
         cmake.build()
 ```
