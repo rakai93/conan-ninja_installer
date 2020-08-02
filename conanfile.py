@@ -3,14 +3,14 @@ from conans import ConanFile
 from conans.client import tools
 
 
-class NinjaInstallerConan(ConanFile):
-    name = "ninja_installer"
-    version = "1.8.2"
+class NinjaConan(ConanFile):
+    name = "ninja"
+    version = "1.10.0"
     license = "TDB"
     url = "https://ninja-build.org/"
     settings = "os_build", "arch_build"
     build_policy = "missing"
-    description = "Ninja installer. Useful as a build_requires."
+    description = "Ninja build tool. Useful as a build_requires."
 
     @property
     def binary_available(self):
