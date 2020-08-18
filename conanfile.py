@@ -21,7 +21,7 @@ class NinjaConan(ConanFile):
 
     def build_requirements(self):
         if not self.binary_available:
-            self.build_requires("python/3.7.4@bananamonster/misc")
+            self.build_requires("python/3.7.4@bananamonster/build-tools")
 
     @property
     def binary_url(self):
